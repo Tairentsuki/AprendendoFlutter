@@ -14,26 +14,54 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 10"), actions: [SwitchTheme()]),
+      appBar: AppBar(title: Text("Aula 11"), actions: [SwitchTheme()]),
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: [
             Text("Contador: $counter", style: TextStyle(fontSize: 25)),
             SwitchTheme(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(width: 50, height: 50, color: Colors.blue),
-                Container(width: 50, height: 50, color: Colors.blue),
-                Container(width: 50, height: 50, color: Colors.blue),
-                Container(width: 50, height: 50, color: Colors.blue),
-                Container(width: 50, height: 50, color: Colors.blue),
-                Container(width: 50, height: 50, color: Colors.blue),
-              ],
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SwitchTheme(),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                spacing: 5,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                  Container(width: 50, height: 50, color: Colors.blue),
+                ],
+              ),
             ),
           ],
         ),
