@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/app_controller.dart';
 
 import 'home_page.dart';
+import 'login_page.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -12,7 +13,7 @@ class AppWidget extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: HomePage(),
+          home: LoginPage(),
           theme: ThemeData(
             primaryColor: Colors.blue,
             brightness: AppController.instance.isDarkTheme
