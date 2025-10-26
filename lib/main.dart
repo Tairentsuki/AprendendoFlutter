@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(
-    Center(
-      child: Container(
-        alignment: Alignment.center,
-        child: Text(
-          "Hello World!",
-          style: TextStyle(color: Colors.yellow, fontSize: 45),
-          textDirection: TextDirection.ltr,
-        ),
-      ),
-    ),
-  );
+  runApp(AppWidget(text: 'Text'));
+}
+
+class AppWidget extends StatelessWidget {
+  final String text;
+
+  const AppWidget({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      home:  Center(child: Text("Text")),
+      theme: ThemeData.dark(),
+    );
+  }
 }
