@@ -14,13 +14,23 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 14"), actions: [SwitchTheme()]),
+      appBar: AppBar(
+        title: Text("Aula 15"),
+        actions: [
+          SwitchTheme(),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed('/');
+            },
+            child: Icon(Icons.exit_to_app),
+          ),
+        ],
+      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text("Contador: $counter", style: TextStyle(fontSize: 25)),
-            SwitchTheme(),
             Container(height: 15),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
