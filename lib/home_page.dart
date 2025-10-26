@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 9"), actions: [SwitchTheme()]),
+      appBar: AppBar(title: Text("Aula 10"), actions: [SwitchTheme()]),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -22,8 +22,19 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Contador: $counter", style: TextStyle(fontSize: 25),),
+            Text("Contador: $counter", style: TextStyle(fontSize: 25)),
             SwitchTheme(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(width: 50, height: 50, color: Colors.blue),
+                Container(width: 50, height: 50, color: Colors.blue),
+                Container(width: 50, height: 50, color: Colors.blue),
+                Container(width: 50, height: 50, color: Colors.blue),
+                Container(width: 50, height: 50, color: Colors.blue),
+                Container(width: 50, height: 50, color: Colors.blue),
+              ],
+            ),
           ],
         ),
       ),
