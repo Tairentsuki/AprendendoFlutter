@@ -14,31 +14,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 13"), actions: [SwitchTheme()]),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.vertical,
+      appBar: AppBar(title: Text("Aula 14"), actions: [SwitchTheme()]),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Text("Contador: $counter", style: TextStyle(fontSize: 25)),
             SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
-            SwitchTheme(),
+            Container(height: 15),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -67,13 +50,27 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.plus_one),
-        onPressed: () {
-          setState(() {
-            counter++;
-          });
-        },
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        spacing: 10,
+        children: [
+          FloatingActionButton(
+            child: Icon(Icons.plus_one),
+            onPressed: () {
+              setState(() {
+                counter++;
+              });
+            },
+          ),
+          FloatingActionButton(
+            child: Icon(Icons.exposure_minus_1),
+            onPressed: () {
+              setState(() {
+                counter--;
+              });
+            },
+          ),
+        ],
       ),
     );
   }

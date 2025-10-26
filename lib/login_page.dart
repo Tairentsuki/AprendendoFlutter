@@ -50,9 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: () {
                     if (email == "teste@gmail.com" && password == "123456") {
-                      Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (context) => HomePage())
-                    );
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print("Login inválido");
                     }
