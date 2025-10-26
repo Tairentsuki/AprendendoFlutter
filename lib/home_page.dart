@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 11"), actions: [SwitchTheme()]),
+      appBar: AppBar(title: Text("Aula 13"), actions: [SwitchTheme()]),
       body: Container(
         width: double.infinity,
         height: double.infinity,
