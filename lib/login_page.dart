@@ -23,9 +23,15 @@ class _LoginPageState extends State<LoginPage> {
           child: Padding(
             padding: const EdgeInsets.all(64.0),
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 10,
               children: [
+                Container(
+                  width: 200,
+                  height: 200,
+                  child: Image.asset('assets/images/Logo.png')
+                ),
                 TextField(
                   onChanged: (text) {
                     email = text;
@@ -56,6 +62,12 @@ class _LoginPageState extends State<LoginPage> {
                     }
                   },
                   child: Text("Login"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                      Navigator.of(context).pushReplacementNamed('/home');
+                  },
+                  child: Text("Entrar sem logar"),
                 ),
               ],
             ),
