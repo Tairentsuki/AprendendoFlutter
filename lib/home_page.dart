@@ -13,43 +13,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 5")),
-      body: Center(
-        child: GestureDetector(
-          child: Text("Contador: $counter", style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold), ),
-          onTap: () {
-            setState(() {
-              counter++;
-            });
-          },
-          onDoubleTap: () {
-            setState(() {
-              counter--;
-            });
-          },
+      appBar: AppBar(title: Text("Aula 6")),
+      body: Container(
+        height: 200,
+        width: 200,
+        color: Colors.blue,
+        child: Center(
+          child: Container(
+            height: 150,
+            width: 150,
+            color: Colors.yellow,
+            child: Center(
+              child: Container(height: 100, width: 100, color: Colors.white),
+            ),
+          ),
         ),
-      ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        spacing: 10,
-        children: [
-          FloatingActionButton(
-            child: Icon(Icons.exposure_minus_1),
-            onPressed: () {
-              setState(() {
-                counter--;
-              });
-            },
-          ),
-          FloatingActionButton(
-            child: Icon(Icons.exposure_plus_1),
-            onPressed: () {
-              setState(() {
-                counter++;
-              });
-            },
-          ),
-        ],
       ),
     );
   }
