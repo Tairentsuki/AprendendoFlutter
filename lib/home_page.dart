@@ -9,18 +9,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 7")),
-      body: Center(
-        child: Switch(value: AppController.instance.isDarkTheme, onChanged: (value) {
-          AppController.instance.changeTheme();
-        }
-        )
-      ),
+      appBar: AppBar(title: Text("Aula 8"), actions: [SwitchTheme()]),
+      body: Center(child: SwitchTheme()),
+    );
+  }
+}
+
+class SwitchTheme extends StatelessWidget {
+  const SwitchTheme({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      value: AppController.instance.isDarkTheme,
+      onChanged: (value) {
+        AppController.instance.changeTheme();
+      },
     );
   }
 }
