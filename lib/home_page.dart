@@ -9,12 +9,33 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 8"), actions: [SwitchTheme()]),
-      body: Center(child: SwitchTheme()),
+      appBar: AppBar(title: Text("Aula 9"), actions: [SwitchTheme()]),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("Contador: $counter", style: TextStyle(fontSize: 25),),
+            SwitchTheme(),
+          ],
+        ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.plus_one),
+        onPressed: () {
+          setState(() {
+            counter++;
+          });
+        },
+      ),
     );
   }
 }
