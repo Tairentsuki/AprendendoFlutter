@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/app_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,21 +14,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aula 6")),
-      body: Container(
-        height: 200,
-        width: 200,
-        color: Colors.blue,
-        child: Center(
-          child: Container(
-            height: 150,
-            width: 150,
-            color: Colors.yellow,
-            child: Center(
-              child: Container(height: 100, width: 100, color: Colors.white),
-            ),
-          ),
-        ),
+      appBar: AppBar(title: Text("Aula 7")),
+      body: Center(
+        child: Switch(value: AppController.instance.isDarkTheme, onChanged: (value) {
+          AppController.instance.changeTheme();
+        }
+        )
       ),
     );
   }
